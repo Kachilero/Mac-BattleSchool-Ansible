@@ -2,11 +2,19 @@
 
 * already installed MAMP (and it's currently running)
 * SSH keys already set and accepted on servers
-* ~/.drush/myinfo.php is created
-should look like:
 
+##steps
+1. ```
+sudo easy_install pip;
+sudo pip install battleschool
 ```
-<?php
-$user = 'josh.fabean'; #this is server username
-$sites_dir = '/Users/USERNAMEHERE/Sites';
+2. ```
+mkdir ~/.battleschool;
+cd ~/.battleschool;
+git clone https://github.com/fabean/Mac-BattleSchool-Ansible.git;
+battle --config-file ~/.battleschool/config.yml --module-path=/usr/share/battleschool/library --ask-sudo-pass;
+```
+3. ```
+cd playbooks;
+sh dnsmasq.sh
 ```
