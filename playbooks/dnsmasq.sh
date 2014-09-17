@@ -25,6 +25,8 @@ cp ../php.ini /Applications/MAMP/bin/php/php5.4.30/conf/php.ini;
 rm -R /Applications/MAMP/bin/php/php5.1.6;
 rm -R /Applications/MAMP/bin/php/php5.2.17;
 rm -R /Applications/MAMP/bin/php/php5.3.28;
+rm /Applications/MAMP/db/mysql/ib_logfile0;
+rm /Applications/MAMP/db/mysql/ib_logfile1;
 cp ../my.cnf /Applications/MAMP/conf/my.cnf;
 mkdir ~/.drush/;
 cd ~/.drush/;
