@@ -16,3 +16,4 @@ git clone git@aegir2.ryanwyse.com:/home/git/drush-aliases.git;
 cp drush-aliases/* .;
 mv drush-aliases/.git/ .;
 rm -Rf drush-aliases/;
+php auto-git.php;
