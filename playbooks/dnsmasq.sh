@@ -1,4 +1,5 @@
 #!/bin/bash/
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 cp $(brew list dnsmasq | grep /dnsmasq.conf.example$) /usr/local/etc/dnsmasq.conf;
 sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/;
 echo 'address=/.dev/127.0.0.1' > /usr/local/etc/dnsmasq.conf;
@@ -19,6 +20,9 @@ cd /usr/local/bin; sudo ln -s /Applications/MAMP/Library/bin/mysql mysql;
 cd /Applications/MAMP/conf/apache;
 cp ~/.battleschool/httpd.conf .;
 #cp ~/.battleschool/extra-httpd-vhosts.conf ./extra/httpd-vhosts.conf;
+cp ../php.ini /Applications/MAMP/conf/php5.5.14/php.ini;
+cp ../php.ini /Applications/MAMP/bin/php/php5.5.14/conf/php.ini;
+cp ../my.cnf /Applications/MAMP/conf/my.cnf;
 mkdir ~/.drush/;
 cd ~/.drush/;
 git clone git@aegir2.ryanwyse.com:/home/git/drush-aliases.git;
