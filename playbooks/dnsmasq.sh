@@ -10,6 +10,7 @@ cd ~/drush;
 composer install;
 echo "Please enter your computer username (/Users/USERNAME/)";
 read UserName; echo "export PATH=$PATH:/Users/$UserName/drush" >> ~/.profile;
+cd /usr/bin; ln -s /Users/$UserName/drush/drush;
 cd /Applications/MAMP/conf/apache;
 cp ~/.battleschool/httpd.conf .;
 #cp ~/.battleschool/extra-httpd-vhosts.conf ./extra/httpd-vhosts.conf;
