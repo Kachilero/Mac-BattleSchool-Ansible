@@ -8,6 +8,8 @@ curl -sS https://getcomposer.org/installer | php;
 sudo mv composer.phar /usr/bin/composer;
 cd ~/drush;
 composer install;
+echo "Please enter your computer username (/Users/USERNAME/)";
+read UserName; echo "export PATH=$PATH:/Users/$UserName/drush" >> ~/.profile;
 cd /Applications/MAMP/conf/apache;
 cp ~/.battleschool/httpd.conf .;
 cp ~/.battleschool/extra-httpd-vhosts.conf ./extra/httpd-vhosts.conf;
