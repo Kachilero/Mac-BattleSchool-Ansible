@@ -1,5 +1,9 @@
 #!/bin/bash/
+cp $(brew list dnsmasq | grep /dnsmasq.conf.example$) /usr/local/etc/dnsmasq.conf;
+sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/;
 echo 'address=/.dev/127.0.0.1' > /usr/local/etc/dnsmasq.conf;
+sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist;
+echo 'nameserver 127.0.0.1' > /etc/resolver/dev;
 cd ~/Downloads; 
 wget https://github.com/drush-ops/drush/archive/master.zip;
 unzip master.zip;
