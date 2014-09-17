@@ -1,0 +1,10 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install git
+      mac_pkg: pkg_type=app
+               url=http://sourceforge.net/projects/git-osx-installer/files/git-2.0.1-intel-universal-snow-leopard.dmg
+               archive_type=dmg archive_path=git.app
+      sudo: yes
+

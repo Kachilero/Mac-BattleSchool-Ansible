@@ -1,0 +1,51 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: print from playbook
+      debug: msg="in playbooks/playbook.yml"
+
+    - name: install apps from homebrew
+      homebrew: name={{item}} state=present
+      with_items:
+          - wget
+          - dnsmasq
+          - node
+
+    #- name: config dnsmasq
+    #  debug: msg="dnsmasq config"
+    #  shell: dnsmasq.sh
+      
+
+    # - name: install composer
+    #   debug: msg="install composer"
+    #   command: "{{item}}"
+    #   with_items:
+    #       - brew update
+    #       - brew tap homebrew/homebrew-php
+    #       - brew tap homebrew/dupes
+    #       - brew tap homebrew/versions
+    #       - brew install php55-intl
+    #       - brew install homebrew/php/composer
+    #       - brew install --HEAD drush
+    #       - brew switch drush HEAD
+    #       - cd /usr/local/Cellar/drush/HEAD/libexec
+    #       - composer install
+
+    # requires node/npm from above
+    - name: install global apps from npm
+      npm: name={{item}} global=yes
+      with_items:
+          - grunt-cli
+          - phonegap
+
+
+
+         
+
+#    - name: install gems
+#      gem: name={{item}} state=latest
+#      with_items:
+#          - brewbygems
+#          - bundler
+#          - compass

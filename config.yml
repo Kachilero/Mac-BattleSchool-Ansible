@@ -1,0 +1,18 @@
+---
+cache_dir: ~/Library/Caches/battleschool
+
+sources:
+  local:
+    - java7.yml
+    - playbook.yml
+    - chrome.yml
+    - dropbox.yml
+    - phpstorm.yml
+    #- git.yml 
+    - playbook.yml
+
+  #url:
+  #  - name: playbook.yml
+  #    url: https://db.tt/VcyI9dvr
+
+  

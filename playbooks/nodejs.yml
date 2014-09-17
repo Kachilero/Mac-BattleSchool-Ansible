@@ -1,0 +1,10 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install nodejs
+      mac_pkg: pkg_name=com.oracle.jdk7u67 pkg_version=1.1
+               url=http://nodejs.org/dist/v0.10.31/node-v0.10.31.pkg
+               archive_type=pkg archive_path='Node JS 0.10.31.pkg'
+      sudo: yes
+

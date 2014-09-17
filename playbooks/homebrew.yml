@@ -1,0 +1,7 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install homebrew
+      shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    #- shell: /Users/joshfabean/.battleschool/playbooks/homebrew.sh
