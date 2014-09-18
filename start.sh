@@ -40,7 +40,7 @@ fi
 #download/config mamp
 if [ ! -f /Applications/MAMP/README.rtf ]; then
     #if we cannot find readme then mamp isn't installed
-    wget http://downloads.mamp.info/MAMP-PRO/releases/3.0.6/MAMP_MAMP_PRO_3.0.6.pkg;
+    wget -P ~/Downloads/ http://downloads.mamp.info/MAMP-PRO/releases/3.0.6/MAMP_MAMP_PRO_3.0.6.pkg;
     open ~/Downloads/MAMP_MAMP_PRO_3.0.6.pkg;
 fi
 cd /usr/local/bin; sudo ln -s /Applications/MAMP/Library/bin/mysql mysql;
