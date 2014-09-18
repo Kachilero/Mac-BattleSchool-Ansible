@@ -7,7 +7,6 @@ mkdir ~/.battleschool;
 
 # move everything to .battleschool directory
 cp -R ~/Downloads/Mac-BattleSchool-Ansible-master/* ~/.battleschool/;
-cp -R ~/Downloads/Mac-BattleSchool-Ansible-master/.git ~/.battleschool/;
 cd ~/.battleschool;
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
 brew doctor;
