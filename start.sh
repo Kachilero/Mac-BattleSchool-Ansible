@@ -85,7 +85,14 @@ if [ ! -f /Applications/MAMP/conf/apache/extra/ran-script.txt ]; then
     touch /Applications/MAMP/conf/apache/extra/ran-script.txt;
 fi
 
-#set up autogit drush
+# set up autogit drush
+# if you aren't in Code Koalas, then you don't have this and can skip this
+# our auto-git code is pretty clever
+# if a new drush alias is made and pushed up, 
+# the site auto downloads on every computer
+# so people can 'instantly' start local development with no setup
+# it's basically magic
+
 echo 'setting up the drush auto-git';
 mkdir ~/.drush/;
 cd ~/.drush/;
