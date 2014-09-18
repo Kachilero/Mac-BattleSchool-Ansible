@@ -3,9 +3,9 @@ cache_dir: ~/Library/Caches/battleschool
 
 sources:
   local:
-    - java6.yml
+    #- java6.yml
     - java7.yml
-    - playbook.yml
+    #- playbook.yml
     - chrome.yml
     - dropbox.yml
     - phpstorm.yml
