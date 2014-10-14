@@ -1,4 +1,9 @@
+mkdir ~/.battleschool;
 
+# move everything to .battleschool directory
+echo 'moving everything to the battleschool directory';
+cp -R ~/Downloads/Mac-BattleSchool-Ansible-master/* ~/.battleschool/;
+cd ~/.battleschool;
 #config dnmasq
 brew install dnsmasq;
 echo 'config dnsmasq';
