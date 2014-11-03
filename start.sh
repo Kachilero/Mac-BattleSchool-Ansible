@@ -23,11 +23,13 @@ cp $(brew list dnsmasq | grep /dnsmasq.conf.example$) /usr/local/etc/dnsmasq.con
 sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/;
 sudo echo 'address=/.dev/127.0.0.1' > /usr/local/etc/dnsmasq.conf;
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist;
+sudo mkdir /etc/resolver;
+sudo touch /etc/resolver/dev;
 sudo echo 'nameserver 127.0.0.1' > /etc/resolver/dev;
 
 #download drush
 echo 'download drush';
-cd ~/Downloads; 
+cd ~/Downloads;
 wget https://github.com/drush-ops/drush/archive/master.zip;
 unzip master.zip;
 cp -R drush-master ~/drush;
@@ -46,8 +48,8 @@ fi
 echo 'download mamp';
 if [ ! -f /Applications/MAMP/README.rtf ]; then
     #if we cannot find readme then mamp isn't installed
-    wget -P ~/Downloads/ http://downloads10.mamp.info/MAMP-PRO/releases/3.0.6/MAMP_MAMP_PRO_3.0.6.pkg;
-    open ~/Downloads/MAMP_MAMP_PRO_3.0.6.pkg;
+    wget -P ~/Downloads/ http://downloads10.mamp.info/MAMP-PRO/releases/3.0.7.2/MAMP_MAMP_PRO_3.0.7.2.pkg;
+    open ~/MAMP_MAMP_PRO_3.0.7.2.pkg;
     echo 'Hit enter when done installing MAMP';
     read WaitingForEnter;
 fi
@@ -61,6 +63,7 @@ cp ~/.battleschool/my.cnf /Applications/MAMP/conf/my.cnf;
 rm -R /Applications/MAMP/bin/php/php5.1.6;
 rm -R /Applications/MAMP/bin/php/php5.2.17;
 rm -R /Applications/MAMP/bin/php/php5.3.28;
+#if never launched these don't exist
 rm /Applications/MAMP/db/mysql/ib_logfile0;
 rm /Applications/MAMP/db/mysql/ib_logfile1;
 #build virtual hosts
@@ -88,7 +91,7 @@ fi
 # set up autogit drush
 # if you aren't in Code Koalas, then you don't have this and can skip this
 # our auto-git code is pretty clever
-# if a new drush alias is made and pushed up, 
+# if a new drush alias is made and pushed up,
 # the site auto downloads on every computer
 # so people can 'instantly' start local development with no setup
 # it's basically magic

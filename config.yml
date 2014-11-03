@@ -6,6 +6,5 @@ sources:
     - java7.yml
     - chrome.yml
     - dropbox.yml
-    - phpstorm.yml
+    #- phpstorm.yml
     - playbook.yml
-

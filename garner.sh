@@ -11,6 +11,8 @@ cp $(brew list dnsmasq | grep /dnsmasq.conf.example$) /usr/local/etc/dnsmasq.con
 sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/;
 sudo echo 'address=/.dev/127.0.0.1' > /usr/local/etc/dnsmasq.conf;
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist;
+sudo mkdir /etc/resolver;
+sudo touch /etc/resolver/dev;
 sudo echo 'nameserver 127.0.0.1' > /etc/resolver/dev;
 
 echo 'configure mamp';
