@@ -23,4 +23,7 @@ sudo touch /etc/resolver/dev;
 sudo echo 'nameserver 127.0.0.1' > /etc/resolver/dev;
 ```
 if you continue to have issues read this [blog](http://passingcuriosity.com/2013/dnsmasq-dev-osx/)
+Why doesn't this WORK!?
 * It sometimes randomly fails, not sure why yet. Just run it again and it's all good.
+* Yosemite doesn't come with wget. Need to brew install this first
+* 
