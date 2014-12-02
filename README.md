@@ -1,3 +1,5 @@
+# With Yosemite this mostly doesn't work anymore. Needs to totally rewritten but you can hack this together and still make it work.
+
 #Assumed...
 
 * SSH keys already set and accepted on servers
